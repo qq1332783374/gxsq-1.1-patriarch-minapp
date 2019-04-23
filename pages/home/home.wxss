@@ -1,0 +1,6 @@
+/* pages/home/home.wxss */
+@import '../../colorui/main.wxss';
+
+.home .content{
+    padding-top: 45px;
+}

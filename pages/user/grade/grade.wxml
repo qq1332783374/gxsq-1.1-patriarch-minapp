@@ -1,0 +1,26 @@
+<view class="grade">
+       <view class="head">
+           {{grade.stuName}}的成绩
+       </view>
+       
+
+
+        
+
+
+        <view class="gradeinfo">
+           <view class="cu-form-group">
+                <view class='title'>学期:</view>
+                <view class="txt">{{grade.semester}}</view>
+            </view>
+            <view class="cu-form-group">
+                <view class='title'>科目:</view>
+                <view class="txt">{{grade.subject}}</view>
+            </view>
+            <view class="cu-form-group">
+                <view class='title'>分数:</view>
+                <view class="txt">{{grade.score}}</view>
+            </view>
+       </view>
+
+    </view>

@@ -1,0 +1,32 @@
+<view>
+  <view class='head'>我的帖子</view>
+  <view class="card" wx:for='{{thesis}}' wx:key='index' data-index='{{index}}'>
+  <navigator url="/pages/textWork/textWork?postUUID={{item.jobUUID}}">
+    <view class="card-item">
+    
+        <view class="header">
+            <view class="title">
+                <text class="bolder">{{item.postName}}</text>
+            </view>
+            
+            
+        </view>
+
+        <view class="content">
+            <view class="desc">
+                <view class="text-conetnt">
+                    {{item.orgName}}
+                </view>
+                <view>
+                   <text>{{item.industry}}</text>
+                   <text style='float: right;'>薪资：{{item.salary}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    </navigator>
+    <view class='del' bindtap='del' data-index='{{index}}'>
+      x
+    </view>
+</view>
+</view>

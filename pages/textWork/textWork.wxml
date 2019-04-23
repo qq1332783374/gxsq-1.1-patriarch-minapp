@@ -1,0 +1,44 @@
+<view class="text-detail">
+  <view class="title text-black text-bold text-xl">
+    <text>{{textWork.postName || '文章标题'}}</text>
+  </view>
+
+
+  <view class="user">
+    
+    <view class="user-info">
+      <view class="user-name text-black text-bold">{{textWork.orgName || '用户名'}}</view>
+      <view class="date">{{textWork.createTime}}</view>
+    </view>
+  </view>
+
+  <view class="text-content">
+    <view class="text-img" style="background-image: url(https://gss2.bdstatic.com/-fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike150%2C5%2C5%2C150%2C50/sign=aab3da1a5db5c9ea76fe0bb1b450dd65/8c1001e93901213f2626a2cd52e736d12f2e958e.jpg); ">
+
+    </view>
+    <view class="txt" html="{{textDetail.postContent}} || '文章内容'">
+      {{textWork.orgRemark || '文章内容'}}
+    </view>
+    <view>岗位描述：</view>
+    <view class='jobRemark' style='text-indent:25px'>
+         {{textWork.jobRemark}}
+    </view>
+    <view>工作要求：</view>
+    <view class='jobRequest' style='text-indent:25px'>
+      {{textWork.jobRequest}}
+    </view>
+    <view>工作地点：</view>
+    <view class='orgAddress' style='text-indent:25px'>
+      {{textWork.orgAddress}}
+    </view>
+    <view class='job'>
+      <text>岗位：{{textWork.job}}</text>
+      <text class='right'>薪资：{{textWork.salary}}</text>
+    </view>
+    <view class='linkman'>
+      <text>联系人：{{textWork.linkman}}</text>
+      <text class='right'>联系电话：{{textWork.phone}}</text>
+    </view>
+  </view>
+
+  </view>

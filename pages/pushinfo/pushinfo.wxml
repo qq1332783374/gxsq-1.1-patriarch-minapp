@@ -1,0 +1,57 @@
+<view class='padding-xl'>
+  
+    <view class="cu-form-group">
+      <view class='title'>标题:</view>
+      <input type="text" placeholder="记得填写哦" bindinput='postName'></input>
+    </view>
+
+    <view class="cu-form-group">
+      <view class='title'>公司名称:</view>
+      <input type="text" placeholder="记得填写哦" bindinput='orgName'></input>
+    </view>
+
+    <view class="cu-form-group">
+      <view class='title'>工作地点:</view>
+      <input type="text" placeholder="记得填写哦" bindinput='orgAddress'></input>
+    </view>
+
+    <view class="cu-form-group">
+      <view class='title'>岗位:</view>
+      <input type="text" placeholder="记得填写哦" bindinput='job'></input>
+    </view>
+
+    <view class="cu-form-group">
+      <view class='title'>薪水范围:</view>
+      <input type="text" placeholder="记得填写哦" bindinput='salary'></input>
+    </view>
+
+    <view class="cu-form-group">
+      <view class='title'>联系人:</view>
+      <input type="text" placeholder="记得填写哦" bindinput='phone'></input>
+    </view>
+
+    <view class="cu-form-group">
+      <view class='title'>联系电话:</view>
+      <input type="text" placeholder="记得填写哦" bindinput='linkman'></input>
+    </view>
+  
+      <view>公司描述:</view>
+  <view class="cu-form-group margin-top">
+          <textarea placeholder="公司描述" maxlength="-1" placeholder-class='placeholder' bindinput='orgRemark'></textarea>
+        </view>
+        <view>工作要求:</view>
+        <view class="cu-form-group margin-top">
+          <textarea placeholder="工作要求" maxlength="-1" placeholder-class='placeholder' bindinput='jobRequest'></textarea>
+        </view>
+        <view>岗位描述:</view>
+        <view class="cu-form-group margin-top">
+          <textarea placeholder="岗位描述" maxlength="-1" placeholder-class='placeholder' bindinput='jobRemark'></textarea>
+        </view>
+    <view>
+      <button bindtap='add' class='btn'>发帖</button>
+    </view>
+
+
+
+
+</view>

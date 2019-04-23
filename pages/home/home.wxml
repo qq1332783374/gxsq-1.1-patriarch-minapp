@@ -1,0 +1,52 @@
+<!--pages/home/home.wxml-->
+<view class="home">
+  <!-- tab导航栏 -->
+  <i-tabs current="{{ current }}" color="#2b99ff" bindchange="handleChange" fixed="true">
+
+    <i-tab key="tab2" title="广场"></i-tab>
+    <i-tab key="tab3" title="就业"></i-tab>
+  </i-tabs>
+
+  <view class="content">
+    <view class="tab1 animation-fade" wx:if="{{current == 'tab1'}}">
+      <!-- 轮播图 -->
+
+      <myTab1 mytabdata="{{myTabData}}"></myTab1>
+    </view>
+
+    <view class="tab2 animation-fade" wx:if="{{current == 'tab2'}}">
+      <i-notice-bar>
+        2019/03/31,广现专才社区1.0版本正式启动
+      </i-notice-bar>
+      <swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">
+        <swiper-item wx:for="{{swiperList}}" wx:key class="{{cardCur==index?'cur':''}}">
+          <view class="swiper-item">
+            <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+            <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+          </view>
+        </swiper-item>
+      </swiper>
+      <myTab2 mytabdata="{{myTabData}}"></myTab2>
+    </view>
+
+    <view class="tab3 animation-fade" wx:if="{{current == 'tab3'}}">
+    <!-- 搜索就业相关 -->
+      <view class='seek'>
+        <view class='box'>
+          <view class="cu-bar search bg-white">
+            <view class='search-form round'>
+              <text class="icon-search"></text>
+              <input type="text" placeholder="搜索就业相关..." confirm-type="search" bindinput='seekInput'></input>
+            </view>
+            <view class='action'>
+              <button class='cu-btn bg-green shadow-blur round' bindtap='seek'>搜索</button>
+            </view>
+          </view>
+        </view>
+      </view>
+      <myTab3 mytabdata="{{myTabData}}"></myTab3>
+    </view>
+
+  </view>
+
+</view>
